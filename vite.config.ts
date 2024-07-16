@@ -28,13 +28,4 @@ export default defineConfig({
 	define: {
 		__VUE_PROD_HYDRATION_MISMATCH_DETAILS__: "true",
 	},
-	server: {
-		proxy: {
-			'/api': {
-				target: 'http://127.0.0.1:9090/api',
-				changeOrigin: true,
-				rewrite: (path) => path.replace(/^\/api/, '')
-			}
-		}
-	}
 });
